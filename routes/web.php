@@ -11,20 +11,17 @@
 |
  */
 
-$router->get('/', function () use ($router) {
-    return view('principal');
-});
-
-$router->get('/partials/{resource}/{action}', function () use ($router) {
-    return view('partials/resource/action');
+$router->get('/api/v1', function () use ($router) {
+    //return view('principal');
+    return $router->app->version();
 });
 
 /**
  * Routes for resource product
  */
 
-$router->get('product', 'ProductsController@all');
-$router->get('product/{id}', 'ProductsController@get');
-$router->post('product', 'ProductsController@add');
-$router->put('product/{id}', 'ProductsController@put');
-$router->delete('product/{id}', 'ProductsController@remove');
+$router->get('api/v1/products', 'ProductsController@all');
+$router->get('api/v1/products/{id}', 'ProductsController@get');
+$router->post('api/v1/products', 'ProductsController@add');
+$router->put('api/v1/products/{id}', 'ProductsController@put');
+$router->delete('api/v1/products/{id}', 'ProductsController@remove');
