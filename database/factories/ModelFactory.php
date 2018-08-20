@@ -62,3 +62,21 @@ $factory->define(App\Product::class, function ($faker) {
         // Fields here
     ];
 });
+
+/**
+ * Factory definition for model App\Client.
+ */
+$factory->define(App\Client::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});
+
+/**
+ * Factory definition for model App\Provider.
+ */
+$factory->define(App\Provider::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});

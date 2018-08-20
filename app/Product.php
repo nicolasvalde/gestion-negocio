@@ -13,6 +13,7 @@ class Product extends Model {
         "descripcion" => "nullable",
         "precio_actual" => "nullable",
         "margen_ganancia" => "nullable",
+        "stock" => "nullable",
     ];
 
     public $timestamps = false;
