@@ -80,3 +80,12 @@ $factory->define(App\Provider::class, function ($faker) {
         // Fields here
     ];
 });
+
+/**
+ * Factory definition for model App\Category.
+ */
+$factory->define(App\Category::class, function ($faker) {
+    return [
+        // Fields here
+    ];
+});

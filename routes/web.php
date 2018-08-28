@@ -43,3 +43,12 @@ $router->get('api/v1/providers/{id}', 'ProvidersController@get');
 $router->post('api/v1/providers', 'ProvidersController@add');
 $router->put('api/v1/providers/{id}', 'ProvidersController@put');
 $router->delete('api/v1/providers/{id}', 'ProvidersController@remove');
+
+/**
+ * Routes for resource api/v1/categories
+ */
+$router->get('api/v1/categories', 'CategoriesController@all');
+$router->get('api/v1/categories/{id}', 'CategoriesController@get');
+$router->post('api/v1/categories', 'CategoriesController@add');
+$router->put('api/v1/categories/{id}', 'CategoriesController@put');
+$router->delete('api/v1/categories/{id}', 'CategoriesController@remove');
