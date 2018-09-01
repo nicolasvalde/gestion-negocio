@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model {
+class Category extends Model
+{
 
     protected $fillable = ["name"];
 
@@ -15,7 +16,7 @@ class Category extends Model {
     public $timestamps = false;
 
     // Relationships
-    public function phone()
+    public function product()
     {
         return $this->hasMany('App\Product');
     }
