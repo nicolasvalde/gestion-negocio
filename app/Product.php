@@ -5,17 +5,19 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
 
-    protected $fillable = ["nombre", "descripcion", "precio_actual", "margen_ganancia", "stock", "id_category"];
+    protected $fillable = ["brand_id", "presentacion_id", "precio_actual", "margen_ganancia", "stock_blanco", "stock_negro", "id_category", "provider_id"];
 
     protected $dates = [];
 
     public static $rules = [
-        "nombre" => "required",
-        "descripcion" => "nullable",
+        "brand_id" => "required",
+        "presentacion_id" => "nullable",
         "precio_actual" => "nullable",
         "margen_ganancia" => "nullable",
-        "stock" => "nullable",
+        "stock_blanco" => "nullable",
+        "stock_negro" => "nullable",
         "id_category" => "nullable",
+        "provider_id" => "nullable",
     ];
 
     public $timestamps = false;

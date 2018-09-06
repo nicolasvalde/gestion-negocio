@@ -2,29 +2,26 @@
 /**
  * Created by PhpStorm.
  * User: Nico
- * Date: 1/9/2018
- * Time: 01:23
+ * Date: 6/9/2018
+ * Time: 15:33
  */
 
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProviderPhone extends Model
+class Measure extends Model
 {
-    protected $fillable = ["number"];
+    protected $fillable = ["quantity", "scale"];
 
     protected $dates = [];
 
     public static $rules = [
-        "number" => "required",
+        "quantity" => "required",
+        "scale" => "required",
     ];
 
     public $timestamps = false;
 
     // Relationships
-    public function product()
-    {
-        return $this->hasMany('App\Provider');
-    }
 }

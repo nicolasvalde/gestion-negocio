@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Provider extends Model {
 
-    protected $fillable = ["razon_social", "direccion", "telefono", "mail"];
+    protected $fillable = ["razon_social", "direccion", "telefono", "mail", "cuit"];
 
     protected $dates = [];
 
@@ -13,6 +13,7 @@ class Provider extends Model {
         "direccion" => "nullable",
         "telefono" => "nullable",
         "mail" => "nullable",
+        "cuit" => "nullable",
     ];
 
     public $timestamps = false;

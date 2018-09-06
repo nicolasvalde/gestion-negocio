@@ -52,3 +52,21 @@ $router->get('api/v1/categories/{id}', 'CategoriesController@get');
 $router->post('api/v1/categories', 'CategoriesController@add');
 $router->put('api/v1/categories/{id}', 'CategoriesController@put');
 $router->delete('api/v1/categories/{id}', 'CategoriesController@remove');
+
+/**
+ * Routes for resource api/v1/brands
+ */
+$router->get('api/v1/brands', 'BrandsController@all');
+$router->get('api/v1/brands/{id}', 'BrandsController@get');
+$router->post('api/v1/brands', 'BrandsController@add');
+$router->put('api/v1/brands/{id}', 'BrandsController@put');
+$router->delete('api/v1/brands/{id}', 'BrandsController@remove');
+
+/**
+ * Routes for resource api/v1/measures
+ */
+$router->get('api/v1/measures', 'MeasuresController@all');
+$router->get('api/v1/measures/{id}', 'MeasuresController@get');
+$router->post('api/v1/measures', 'MeasuresController@add');
+$router->put('api/v1/measures/{id}', 'MeasuresController@put');
+$router->delete('api/v1/measures/{id}', 'MeasuresController@remove');
