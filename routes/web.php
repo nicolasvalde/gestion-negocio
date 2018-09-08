@@ -62,3 +62,4 @@ $router->post('api/v1/brands', 'BrandsController@add');
 $router->put('api/v1/brands/{id}', 'BrandsController@put');
 $router->delete('api/v1/brands/{id}', 'BrandsController@remove');
 
+$router->get('api/v1/pruebas', 'PruebasController@prueba');

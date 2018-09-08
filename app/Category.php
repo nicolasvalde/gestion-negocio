@@ -18,6 +18,6 @@ class Category extends Model
     // Relationships
     public function product()
     {
-        return $this->hasMany('App\Product');
+        return $this->belongsTo('App\Product');
     }
 }

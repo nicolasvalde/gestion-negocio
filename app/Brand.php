@@ -1,6 +1,5 @@
 <?php namespace App;
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
@@ -14,4 +13,10 @@ class Brand extends Model
     ];
 
     public $timestamps = false;
+
+    // Relationships
+    public function product()
+    {
+        return $this->belongsTo('App\Product');
+    }
 }

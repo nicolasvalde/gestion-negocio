@@ -2,7 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Provider extends Model {
+class Provider extends Model
+{
 
     protected $fillable = ["razon_social", "direccion", "telefono", "mail", "cuit"];
 
@@ -19,5 +20,8 @@ class Provider extends Model {
     public $timestamps = false;
 
     // Relationships
-
+    public function product()
+    {
+        return $this->belongsTo('App\Product');
+    }
 }
