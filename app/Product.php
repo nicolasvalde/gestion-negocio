@@ -26,16 +26,17 @@ class Product extends Model
     // Relationships
     public function category()
     {
-        return $this->hasOne(Category::class, id_category);
+        return $this->belongsTo('App\Category');
+        //return \App\Category::find(1)->name;
     }
 
     public function brand()
     {
-        return $this->hasOne(Brand::class, id, brand_id);
+        return $this->belongsTo('App\Brand');
     }
 
     public function provider()
     {
-        return $this->hasOne('App\Provider', provider_id);
+        return $this->belongsTo('App\Provider');
     }
 }
