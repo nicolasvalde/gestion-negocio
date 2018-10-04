@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model {
 
-    protected $fillable = ["nombre", "apellido", "telefono", "mail"];
+    protected $fillable = ["nombre", "apellido", "telefono", "mail", "cuit"];
 
     protected $dates = [];
 
@@ -13,6 +13,7 @@ class Client extends Model {
         "apellido" => "required",
         "telefono" => "nullable",
         "mail" => "nullable",
+        "cuit" => "nullable"
     ];
 
     public $timestamps = false;

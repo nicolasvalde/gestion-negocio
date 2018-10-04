@@ -24,4 +24,9 @@ class Provider extends Model
     {
         return $this->hasMany('App\Product');
     }
+
+    public function orderNote()
+    {
+        return $this->hasMany('App\OrderNote');
+    }
 }

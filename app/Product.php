@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
 
-    protected $fillable = ["brand_id", "measure_quantity", "measure_scale", "precio_actual", "margen_ganancia", "stock_blanco", "stock_negro", "id_category", "provider_id"];
+    protected $fillable = ["brand_id", "measure_quantity", "measure_scale", "precio_actual", "margen_ganancia", "stock_blanco", "stock_negro", "category_id", "provider_id"];
 
     protected $dates = [];
 
@@ -17,7 +17,7 @@ class Product extends Model
         "margen_ganancia" => "nullable",
         "stock_blanco" => "nullable",
         "stock_negro" => "nullable",
-        "id_category" => "nullable",
+        "category_id" => "nullable",
         "provider_id" => "nullable",
     ];
 
@@ -27,7 +27,6 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo('App\Category');
-        //return \App\Category::find(1)->name;
     }
 
     public function brand()
@@ -38,5 +37,10 @@ class Product extends Model
     public function provider()
     {
         return $this->belongsTo('App\Provider');
+    }
+
+    public function orderNote_detail()
+    {
+        return $this->hasMany('App\OrderNote_Detail');
     }
 }
