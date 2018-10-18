@@ -10,7 +10,7 @@ class OrderNote extends Model
 
     public static $rules = [
         "provider_id" => "required",
-        "date" => "nullable",
+        "date" => "required",
         "total" => "required"
     ];
 
@@ -18,9 +18,9 @@ class OrderNote extends Model
 
     // Relationships
 
-    public function orderNote_deatail()
+    public function orderNoteDetail()
     {
-        return $this->hasMany('App\OrderNote_Detail');
+        return $this->hasMany('App\OrderNoteDetail');
     }
 
     public function provider()

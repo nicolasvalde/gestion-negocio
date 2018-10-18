@@ -2,18 +2,18 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class OrderNote_Detail extends Model
+class OrderNoteDetail extends Model
 {
-    protected $fillable = ["OrderNote_id", "quantity", "price", "product_id", "type"];
+    protected $fillable = ["order_note_id", "quantity", "price", "product_code", "type"];
 
     protected $dates = [];
 
     public static $rules = [
-        "OrderNote_id" => "required",
-        "quantity" => "required",
-        "price" => "required",
-        "product_id" => "required",
-        "type" => "required"
+        "order_note_id" => "nullable",
+        "quantity" => "nullable",
+        "price" => "nullable",
+        "product_code" => "nullable",
+        "type" => "nullable"
     ];
 
     public $timestamps = false;

@@ -74,10 +74,10 @@ $router->delete('api/v1/orderNotes/{id}', 'OrderNotesController@remove');
 /**
  * Routes for resource api/v1/onDetails
  */
-$router->get('api/v1/onDetails', 'OrderNote_DeatilsController@all');
-$router->get('api/v1/onDetails/{id}', 'OrderNote_DeatilsController@get');
-$router->post('api/v1/onDetails', 'OrderNote_DeatilsController@add');
-$router->put('api/v1onDetails/{id}', 'OrderNote_DeatilsController@put');
-$router->delete('api/v1/onDetails/{id}', 'OrderNote_DeatilsController@remove');
+$router->get('api/v1/onDetails', 'OrderNoteDetailsController@all');
+$router->get('api/v1/onDetails/{id}', 'OrderNoteDetailsController@get');
+$router->post('api/v1/onDetails', 'OrderNoteDetailsController@addDetails');
+$router->put('api/v1onDetails/{id}', 'OrderNoteDetailsController@put');
+$router->delete('api/v1/onDetails/{id}', 'OrderNoteDetailsController@remove');
 
 $router->get('api/v1/pruebas', 'PruebasController@prueba');
